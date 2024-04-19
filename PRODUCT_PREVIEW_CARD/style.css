@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/*
+    Eliminar estilos de user agents
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*Puntero con forma de mano para botones e hipervínculos */
+a, button {
+    cursor: pointer;
+}
+
+/* Eliminar estilos de listas */
+ol, ul, menu {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(224, 195, 159);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container  {
+    background-color: rgb(247, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    max-width:min-content;
+    box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
+}
+
+.bloque_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
+    width:fit-content;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+}
+
+.foto_desktop{
+    height: 600px;
+    border-radius: 10px;   
+}
+
+.categoria {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(124, 124, 124);
+    letter-spacing: 10px;
+}
+
+.descripcion {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(124, 124, 124);
+}
+
+.titulo {
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    line-height: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.precio__ahora {
+    font-family: 'EB Garamond', serif;
+    color: rgb(7, 86, 12);
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.precio__antes {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(124, 124, 124);
+    text-decoration: line-through;
+    align-self: center;
+    margin-left: 40px;
+}
+
+button {
+    background-color: rgb(7, 86, 12);
+    border-radius: 5px;
+    padding: 20px 40px 20px 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carrito {
+    margin-right: 20px;
+}
+
+
+
+@media (max-width:728px){
+ 
+    
+    body {
+        background-color: rgb(224, 195, 159);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container  {
+        background-color: rgb(247, 255, 255);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        max-width: min-content;
+        box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
+    }
+    
+    .bloque_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        background-color: rgb(255, 255, 255);
+        margin: 30px;
+        width:fit-content;
+    }
+    
+    .foto {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .foto_desktop{
+        height: 300px;
+        border-radius: 10px;   
+    }
+    
+    .categoria {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(124, 124, 124);
+        letter-spacing: 10px;
+        font-size: 12px;
+    }
+    
+    .descripcion {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(124, 124, 124);
+        font-size: 12px;
+    }
+    
+    .titulo {
+        font-family: 'EB Garamond', serif;
+        font-size: 30px;
+        line-height: 35px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .precio {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .precio__ahora {
+        font-family: 'EB Garamond', serif;
+        color: rgb(7, 86, 12);
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .precio__antes {
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(124, 124, 124);
+        text-decoration: line-through;
+        align-self: center;
+        margin-left: 40px;
+    }
+    
+    button {
+        background-color: rgb(7, 86, 12);
+        border-radius: 5px;
+        padding: 20px 40px 20px 40px;
+        color: rgb(255, 255, 255);
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .carrito {
+        margin-right: 20px;
+    }
+  }
